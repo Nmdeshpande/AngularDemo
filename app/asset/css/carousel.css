@@ -1,0 +1,27 @@
+.product-slider { padding: 45px;width:100% }
+
+.product-slider #carousel {margin: 0; }
+
+.product-slider #thumbcarousel { margin: 12px 0 0; padding: 0 45px; }
+
+.product-slider #thumbcarousel .item { text-align: center; }
+
+.product-slider #thumbcarousel .item .thumb {width: 20%; display: inline-block; vertical-align: middle; cursor: pointer; max-width: 98px; }
+
+.product-slider #thumbcarousel .item .thumb:hover { border:2px solid #cecece; }
+
+.product-slider .item img { width:65%; height:65%;margin:auto }
+
+.carousel-control { color: #797D7F; text-align: center; text-shadow: none; font-size: 30px; width: 30px; height: 30px; line-height: 20px; top: 23%; }
+
+.carousel-control:hover, .carousel-control:focus, .carousel-control:active { color: #333; }
+
+.carousel-caption, .carousel-control .fa { font: normal normal normal 30px/26px FontAwesome; }
+.carousel-control { background-color: rgba(0, 0, 0, 0); bottom: auto; font-size: 20px; left: 0; position: absolute; top: 30%; width: auto; }
+
+ .carousel-control.left { background-color: rgba(0, 0, 0, 0); background-image: none;margin-left: 3em; }
+ .carousel-control.right{ background-color: rgba(0, 0, 0, 0); background-image: none;margin-right: 3em; }
+.product-slider #thumbcarousel .item .thumb img{
+	
+	width:90%;
+}

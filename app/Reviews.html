@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="Target">
+		<title></title>
+		<script src="asset/js-libraries/jquery-2.1.4.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="asset/js-libraries/jquery_latest.js"></script>
+		<link href="asset/css-libraries/bootstrap.min.css" rel="stylesheet"/>
+		<link href="asset/css/style.css" rel="stylesheet"/>
+		<link href="asset/css/carousel.css" rel="stylesheet"/>
+		<script src="asset/js-libraries/angularjs1.6.js"></script>
+		<script src="asset/js-libraries/sanitize.js"></script>
+		<script src="asset/js-libraries/bootstrap.min.js"></script>
+	<script src="app.js"></script>
+	<script src="asset/js/ninja.js"></script>
+	</head>
+	<body class="container" ng-app="myApp" ng-controller="myCtrl">
+		<h2 class="rnr">ratings & reviews</h2>
+		<hr/>
+		<div class="row">
+			<div class="col-lg-12 col-sm-12">
+				<ul ng-repeat="x in CatalogEntryView[0].CustomerReview[0].Reviews | slice:0:5" class="reviews">
+					<li><b>{{x.title}}</b> </li>
+					<li>{{x.datePosted}}</li>
+					<li ng-if="x.overallRating == '1'">
+	                    <span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg"></span>
+						<span class="fa fa-star fa-lg"></span>
+						<span class="fa fa-star fa-lg"></span>
+						<span class="fa fa-star fa-lg"></span>
+					</li>
+					<li ng-if="x.overallRating == '2'">
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg"></span>
+						<span class="fa fa-star fa-lg"></span>
+					<span class="fa fa-star fa-lg"></span> </li>
+					<li ng-if="x.overallRating == '3'">
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg"></span>
+					<span class="fa fa-star fa-lg"></span> </li>					
+					<li ng-if="x.overallRating == '4'">
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+					<span class="fa fa-star fa-lg"></span> </li>
+					<li ng-if="x.overallRating == '5'">
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+					<span class="fa fa-star fa-lg checked"></span> </li>
+					<li>{{x.customerId}}</li>
+					<li>{{x.review}} </li>
+					<hr/>
+				</ul>	
+			</div>
+		</div>
+		<div class="row" ng-show="showmore">
+			<div class="col-lg-12 col-sm-12">
+				<ul ng-repeat="x in CatalogEntryView[0].CustomerReview[0].Reviews | slice:5" class="reviews">
+					<li><b>{{x.title}}</b> </li>
+					<li>{{x.datePosted}}</li>
+					<li ng-if="x.overallRating == '1'">
+	                    <span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg"></span>
+						<span class="fa fa-star fa-lg"></span>
+						<span class="fa fa-star fa-lg"></span>
+						<span class="fa fa-star fa-lg"></span>
+					</li>
+					<li ng-if="x.overallRating == '2'">
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg"></span>
+						<span class="fa fa-star fa-lg"></span>
+					<span class="fa fa-star fa-lg"></span> </li>
+					<li ng-if="x.overallRating == '3'">
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg"></span>
+					<span class="fa fa-star fa-lg"></span> </li>					
+					<li ng-if="x.overallRating == '4'">
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+					<span class="fa fa-star fa-lg"></span> </li>
+					<li ng-if="x.overallRating == '5'">
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+						<span class="fa fa-star fa-lg checked"></span>
+					<span class="fa fa-star fa-lg checked"></span> </li>
+					<li>{{x.customerId}}</li>
+					<li>{{x.review}} </li>
+					<hr/>
+				</ul>	
+			</div>
+		</div>
+		<input type="button" class="btn btn-default marginlft1em shownall" value="Show All Reviews" ng-click="showmore=true"/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+
+	</body>
+</html>													
